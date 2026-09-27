@@ -8,10 +8,6 @@ from src import modelo
 
 
 def ajustar_modelo(x, y, theta_inicial=(0.0, 0.0), maxiter=100):
-    """
-    Ajusta el modelo logístico minimizando el riesgo RS.
-    Devuelve un diccionario con theta, RS, success y nit.
-    """
     resultado = minimize(
         fun=modelo.superficie_riesgo,
         x0=np.array(theta_inicial, dtype=float),
